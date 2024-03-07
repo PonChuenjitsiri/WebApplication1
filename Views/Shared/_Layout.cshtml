@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href=""><img src="~/images/logo.png" alt="Logo"> BESTON </a>
+            </div>
+            <ul>
+                <li><a asp-controller="Mainevent" asp-action="Index">event</a></li>
+                <li>
+                    <a href="" >
+                        Category
+                       
+                    </a>
+                </li>
+                <li><a href="">about us</a></li>
+                <li><a href="">log in</a></li>
+                <li><button asp-controller="Login" asp-action="Index">
+                    Get Started
+                    </button></li>
+            </ul>
+            </nav>
+        
+    </header>
+    <div >
+        <main role="main" >
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
